@@ -1,7 +1,7 @@
-import urllib.request
+import urllib.request,requests
 import http.client
 import json
-#日期 2018年8月26日 ：错误：总是extrastr,估计是字符串格式的问题
+
 test_data = {"username":"aaa"}
  #Context是你的表里的列
 test_data = json.dumps(test_data)
@@ -15,10 +15,17 @@ class BmobCloud():
     def Login(self,username,password):
         print('start')
 
-    def Registered(self,username,password)
+    def Registered(self,username,password):
         test_data={'username':str(username),'password':str(password)}
-    def Login(self,username,password)
-        
+    def Login(self,username,password):
+        data={'username':str(username),'password':str(password)}
+        r=requests.get("https://api2.bmob.cn/1/login",params=data,headers=headerdata)
+        s=r.text.split('"')
+        if s[1]=='createdAt':
+            print('User:'+username+'login successful')
+            return True
+        #print(s)
+        #print(r.text.split(','))
 
     def Post(self,username,password):
         test_data={'username':str(username),'password':str(password)}
@@ -47,9 +54,9 @@ class BmobCloud():
         response = conn.getresponse()
         res= response.read()
         print (res)
-    def send(self,method,)
+    def send(self,method,):
+        print()
 
 
-
-
-BmobCloud.Put(BmobCloud,"c44455faf0",1231234569)
+#BmobCloud.Login(BmobCloud,"c44455faf0",1231234569)
+#BmobCloud.Put(BmobCloud,"c44455faf0",1231234569)
