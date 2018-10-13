@@ -37,10 +37,6 @@ def MessageRecv(client,server,message):
                 pass 
     else:
         Sendmessage(client,"ALlogin")
-        
-    
-def 
-
 
 def Sendmessage(client,message):
     message=Cover.Encryption(message)
