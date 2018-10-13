@@ -31,10 +31,11 @@ def MessageRecv(client,server,message):
                 Sendmessage(client,"PASSfail")
         else:
             if recvmessage[0]=='http':
-
-            else:if recvmessage[0]=='https':
-
-                pass 
+                return
+            else:
+                if recvmessage[0]=='https':
+                    return
+                
     else:
         Sendmessage(client,"ALlogin")
 
