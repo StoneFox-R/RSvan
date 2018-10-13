@@ -43,7 +43,7 @@ def Sendmessage(client,message):
     message=Cover.Encryption(message)
     server.send_message(client,message)
 
-PORT=os.getenv("PORT")
+PORT=int(os.getenv("PORT"))
 
 server = WebsocketServer(PORT)
 server.set_fn_new_client(NewClient)
