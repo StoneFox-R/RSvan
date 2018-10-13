@@ -5,7 +5,7 @@ import json
 test_data = {"username":"aaa"}
  #Context是你的表里的列
 test_data = json.dumps(test_data)
- #此处将数据转换成JSON格式才能提交，不然会返回107错误
+ #此处将数据转换成JSON格式才能提交，不然会返.回107错误
 requrl = "/1/classes/_User/" 
  #替换为自己的表名
 headerdata = {"X-Bmob-Application-Id":"37a47ce39b7cee8e517b274a64f499d4",
