@@ -1,6 +1,6 @@
 import websocket,os,Cover
 
-socket=websocket.create_connection("ws://127.0.0.1:8080")
+socket=websocket.create_connection("ws://pythonwwebso.herokuapp.com:80")
 #socket.send('asdfasdfasdf')
 
 while True:
