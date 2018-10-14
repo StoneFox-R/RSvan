@@ -46,6 +46,7 @@ def Sendmessage(client,message):
 
 PORT=int(os.getenv("PORT"))
 print(PORT)
+print('red'+os.environ['REDIS_URL'])
 server = WebsocketServer(PORT)
 server.set_fn_new_client(NewClient)
 server.set_fn_client_left(ClientLeft)
